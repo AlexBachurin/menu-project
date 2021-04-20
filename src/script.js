@@ -1,3 +1,15 @@
+//get Data from json
+const getData = async (url) => {
+    const res = await fetch(url);
+
+    if (!res.ok) {
+        throw new Error(`error status : ${res.status}`);
+    }
+
+    return await res.json();
+}
+
+
 window.addEventListener('DOMContentLoaded', () => {
 
     //class for dynamically creation of MENU ITEMS
@@ -37,29 +49,14 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //get Data from json
-    const getData = async (url) => {
-        const res = await fetch(url);
+    
+    //initizialize page
 
-        if (!res.ok) {
-            throw new Error(`error status : ${res.status}`);
-        }
-
-        return await res.json();
-    }
-
-    //get data from server and create and append every menu item on page, we can use destructuring of object(order doesnt matter)
+    
     getData('data.json')
-        .then(data => data.menu.forEach(({
-            category,
-            title,
-            price,
-            img,
-            desc
-        }) => {
-            //dynamically append with render() method from our class
-            new MenuItem(title, category, price, img, desc, '.menu__items').render();
-        }));
+    .then(data => {
+        displayItems(data.menu);
+    })
 
 
 
@@ -86,31 +83,67 @@ window.addEventListener('DOMContentLoaded', () => {
     //get data and append on page
     getData('data.json')
         .then(data => {
-            //we need to get only unique categories from our data array, so we wont get something like this on page  Breakfast Dinner Milkshake Lunch Breakfast Milkshake Lunch Breakfast Milkshake Lunch
+            //we need to get only unique categories from our data array, so we wont get something like this on page : Breakfast Dinner Milkshake Lunch Breakfast Milkshake Lunch Breakfast Milkshake Lunch
             //thats why we use Set to get only unique items
 
             //get categories from data 
             const categories = data.menu.map(item => {
                 return item.category;
             })
-            console.log(categories);
+            //add All category
             categories.unshift('All')
             //filter for unique categories
             const uniqueCategories = new Set(categories);
-            console.log(uniqueCategories)
 
             //now we can create and apped unique filter buttons to page
             uniqueCategories.forEach(item => {
                 new FilterBtn(item, ".menu__categories").render();
             })
 
-            
+            //add event listeners to this buttons
+            const filterBtns = document.querySelectorAll('.menu__filter');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    //get dataset from category it will be like "breakfast" "lunch" etc.
+                    const category = e.target.dataset.category;
+                    //if category is "All" then show all items
+                    if (category === 'All') {
+                        displayItems(data.menu);
+                    } else {
+                        //else we filter data array depending on which button we clicked(ex. we clicked on "lunch", then category will be lunch, so we filter our data array and it will have 3 element)
+                        const categoryArr = data.menu.filter(item => {
+                            return item.category === category;
+                        })
+                        //and display this on page
+                        displayItems(categoryArr);
+                    }
+
+                    
+
+                   
+                    
+                })
+            })
         })
 
 
+    //function helper to display menu items on fliter button click
 
-    //Filter buttons interactive
+    function displayItems(arr) {
+        //first get all menu items from page and remove them
+        const menuItems = document.querySelectorAll('.menu__item');
+        menuItems.forEach(item => {
+            item.remove();
+        })
 
+        //then iterate through passed array and show new menu items from passed filtered array
+        arr.forEach(({title,category,img,desc,price}) => {
+            new MenuItem(title,category,price,img,desc,'.menu__items').render();
+        })
+    }
+
+    
 
 
 })
