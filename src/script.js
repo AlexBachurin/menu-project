@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //get Data from json
     const getData = async (url) => {
-        const res =  await fetch(url);
+        const res = await fetch(url);
 
         if (!res.ok) {
             throw new Error(`error status : ${res.status}`);
@@ -50,9 +50,67 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //get data from server and create and append every menu item on page, we can use destructuring of object(order doesnt matter)
     getData('data.json')
-    .then(data => data.menu.forEach(({category,title,price,img, desc}) => {
-        //dynamically append with render() method from our class
-        new MenuItem(title,category,price,img,desc,'.menu__items').render();
-    }));
+        .then(data => data.menu.forEach(({
+            category,
+            title,
+            price,
+            img,
+            desc
+        }) => {
+            //dynamically append with render() method from our class
+            new MenuItem(title, category, price, img, desc, '.menu__items').render();
+        }));
+
+
+
+    //Filter buttons
+
+    //class for filter btns
+    class FilterBtn {
+        constructor(category, parentSelector) {
+            this.category = category;
+            this.parent = document.querySelector(parentSelector);
+        }
+
+        render() {
+            const btn = document.createElement('div');
+
+            btn.innerHTML = `
+                <button data-category= ${this.category} class="menu__filter">${this.category}</button>
+            `;
+
+            this.parent.append(btn);
+        }
+    }
+
+    //get data and append on page
+    getData('data.json')
+        .then(data => {
+            //we need to get only unique categories from our data array, so we wont get something like this on page  Breakfast Dinner Milkshake Lunch Breakfast Milkshake Lunch Breakfast Milkshake Lunch
+            //thats why we use Set to get only unique items
+
+            //get categories from data 
+            const categories = data.menu.map(item => {
+                return item.category;
+            })
+            console.log(categories);
+            categories.unshift('All')
+            //filter for unique categories
+            const uniqueCategories = new Set(categories);
+            console.log(uniqueCategories)
+
+            //now we can create and apped unique filter buttons to page
+            uniqueCategories.forEach(item => {
+                new FilterBtn(item, ".menu__categories").render();
+            })
+
+            
+        })
+
+
+
+    //Filter buttons interactive
+
+
 
 })
