@@ -6,7 +6,7 @@
             "category" : "breakfast",
             "price" : 15.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923042/menu-project/buttermilk-pancake.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm"
         },
         {
             "id" : 2,
@@ -14,7 +14,7 @@
             "category" : "dinner",
             "price" : 24.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923171/menu-project/steak.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm "
         },
         {
             "id" : 3,
@@ -22,7 +22,7 @@
             "category" : "milkshake",
             "price" : 16.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923160/menu-project/quarantine-buddy-shake.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm "
         },
         {
             "id" : 4,
@@ -30,7 +30,7 @@
             "category" : "lunch",
             "price" : 12.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923140/menu-project/american-classic.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm "
         },
         {
             "id" : 5,
@@ -38,28 +38,28 @@
             "category" : "breakfast",
             "price" : 9.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923130/menu-project/bacon%20burger.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm "
         },{
             "id" : 6,
             "title" : "Oreo Dream",
             "category" : "milkshake",
             "price" : 17.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923122/menu-project/Oreo-dream-milkshake.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm "
         },{
             "id" : 7,
             "title" : "Egg burger",
             "category" : "lunch",
             "price" : 13.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923114/menu-project/egg-burger.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm "
         },{
             "id" : 8,
             "title" : "Classic",
             "category" : "breakfast",
             "price" : 14.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923105/menu-project/classic-breakfast.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm "
         },
         {
             "id" : 9,
@@ -67,7 +67,7 @@
             "category" : "milkshake",
             "price" : 8.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923092/menu-project/godzilla-milkshake.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm"
         },
         {
             "id" : 10,
@@ -75,7 +75,7 @@
             "category" : "lunch",
             "price" : 15.99,
             "img" : "https://res.cloudinary.com/dljezd6qv/image/upload/v1618923078/menu-project/dinner-double.jpg",
-            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot, which was created for the bliss"
+            "desc" : "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm"
         }
     ]
 }
