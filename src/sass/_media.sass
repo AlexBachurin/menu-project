@@ -1,0 +1,36 @@
+@media screen and ( max-width: 1230px )
+    .menu
+        &__items
+            justify-content: center
+
+@media screen and ( max-width: 575px )
+    .container
+        max-width: 100%
+    .menu
+        &__filter
+            font-size: 16px
+            margin-right: 0
+        &__categories
+            width: 100%
+            flex-wrap: wrap
+            gap: 10px
+        &__categories div
+            &:last-child
+                button
+                    margin-right: 0
+        &__item
+            grid-template-columns: 1fr
+            border-bottom: 1px dotted rgba(0, 0, 0, 0.7)
+            padding-bottom: 20px
+            &-descr
+                margin-top: 20px
+                padding: 0 15px
+            &-title
+                font-size: 20px
+        &__img-container
+            margin: 0 auto
+// @media screen and ( max-width: 387px )
+//     .menu
+//         &__categories div
+//             &:last-child
+//                 margin-top: 10px
